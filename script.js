@@ -23,13 +23,13 @@ function addBookToLibrary(name, author, pages, read) {
     myLibrary.push(b);
 }
 
-// function to add book to libary array
-// need to debug 
+// function to display books in table element 
+// need to debug
 function displayBooks() {
-  for (i = 0; i <= myLibrary.length; i++) {
+  for (i = 0; i <= myLibrary.length + 1; i++) {
     let row = table.insertRow(i);
     let cell = row.insertCell(i);
 
-    cell.innerHTML = JSON.stringify(myLibrary);
+    row.innerHTML = myLibrary[i].name;
   }
 }
